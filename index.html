@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MR Gadgets</title>
+    <link rel="icon" type="icon" href="images/fav-icon.png">
     <!-- Tailwind Css & Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,11 +22,31 @@
                   <a class="text-2xl font-bold">MR Gadgets</a>
                 </div>
                 <div class="navbar-end">
-                  <a href="#" class="btn text-lg lg:text-xl lg:font-bold text-white primary-clr lg:px-10 hover:bg-blue-700">Sign Up</a>
+                  <a href="#" onclick="signUp.showModal()" class="btn text-lg lg:text-xl lg:font-bold text-white primary-clr lg:px-10 hover:bg-blue-700">Sign Up</a>
                 </div>
               </div>
         </section>
         <!-- Navbar Part End -->
+
+        <!-- Sign Up Modal -->
+        <dialog id="signUp" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box text-center flex flex-col gap-4">
+            <p class="font-bold lg:text-2xl pb-6">Sign Up Here</p>
+            <label class="input bg-slate-100 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
+              <input type="text" class="grow" placeholder="Enter Your Email" />
+            </label>
+            <label class="input bg-slate-100 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd" /></svg>
+              <input type="password" class="grow" placeholder="Create a password" />
+            </label>
+            <div class="modal-action flex justify-center">
+              <form method="dialog">
+                <button class="btn primary-clr hover:bg-blue-700 text-white">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
 
         <!-- Banner Part Start -->
         <section>
@@ -34,7 +55,9 @@
                   <div>
                     <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold">Apple Iphone 15 Pro Max</h1>
                     <p class="py-5 lg:py-6 lg:text-lg">There are many variations of passages of Lorem Ipsum available, but the majority <br>3 have suffered alteration in some form, by injected humou.</p>
-                    <button class="btn primary-clr hover:bg-blue-700 font-bold lg:text-xl text-white lg:px-9">Buy Now</button>
+                    <button class="btn primary-clr hover:bg-blue-700 font-bold lg:text-xl text-white lg:px-9">
+                      <a href="#search-part">Explore Now</a>
+                    </button>
                     <img src="images/iPhones.png" alt="iPhones">
                   </div>
                 </div>
@@ -45,7 +68,7 @@
 
     <main class="py-5 md:py-10 lg:py-20">
         <!-- Search Your Phone Part Start -->
-        <section class="container mx-auto text-center pb-5 lg:pb-9">
+        <section id="search-part" class="container mx-auto text-center pb-5 lg:pb-9">
             <h2 class="font-semibold text-2xl lg:text-4xl capitalize pb-4 lg:pb-7">Search your phone</h2>
             <div class="flex justify-center">
                 <input id="search-field" type="text" placeholder="Search your phone" class="input rounded-full bg-slate-100 w-full max-w-lg text-center focus:outline-none border-none" />
@@ -79,17 +102,13 @@
         <!-- Open the modal using ID.showModal() method -->
       <dialog id="show_details" class="modal modal-bottom sm:modal-middle">
         <div id="modal-container" class="modal-box text-center">
-          <form method="dialog">
-            <button class="btn">Close</button>
-          </form>
-        </div>
         </div>
       </dialog>
         <!-- Show Details Model Part end -->
     </main>
 
     <!-- Footer Part Start -->
-    <footer class="bg-[#0D6EFD0D] py-8 lg:py-16">
+    <footer class="bg-[#0D6EFD0D] py-8 lg:py-6">
 
       <section class="container mx-auto">
           <div class="grid justify-between footer p-10 text-neutral-content">
