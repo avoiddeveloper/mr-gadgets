@@ -7,6 +7,8 @@
     <!-- Tailwind Css & Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="css/all.min.css">
     <!-- Custom Js -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -41,7 +43,19 @@
         <!-- Banner Part End -->
     </header>
 
-    <main></main>
+    <main class="py-5 md:py-10 lg:py-20">
+        <!-- Search Your Phone Part Start -->
+        <section class="container mx-auto text-center">
+            <h2 class="font-semibold text-2xl lg:text-4xl capitalize pb-4 lg:pb-7">Search your phone</h2>
+            <div class="flex justify-center">
+                <input type="text" placeholder="Search your phone" class="input rounded-full bg-slate-200 w-full max-w-lg text-center focus:outline-none border-none" />
+                <button class="btn rounded-full primary-clr hover:bg-blue-700 font-bold lg:text-xl text-white">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </section>
+        <!-- Search Your Phone Part End -->
+    </main>
 
     <footer></footer>
 
